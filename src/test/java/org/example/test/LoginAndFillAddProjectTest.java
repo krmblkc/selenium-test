@@ -2,6 +2,7 @@ package org.example.test;
 
 import org.example.base.BaseTest;
 import org.example.page.LoginAndFillProjectAddPage;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,5 +24,10 @@ public class LoginAndFillAddProjectTest extends BaseTest {
         loginAndFillProjectAddPage.clickAddProject();
         loginAndFillProjectAddPage.waitSeconds(10);
         loginAndFillProjectAddPage.sendOffer().sendProjectNo().sendProjectName().sendDate().clickSurveyType().selectSurveyType();
+    }
+
+    @After
+    public void quit(){
+        //tearDown();
     }
 }
